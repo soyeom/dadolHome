@@ -10,7 +10,6 @@ a {
     color: white;
 }
 header {
-    background-color: #333;
     padding: 30px 0;
     position: fixed;
     width: 100%;
@@ -44,6 +43,50 @@ header {
     color: #fff;
     letter-spacing: 3px;
     margin: 0 20px; /* 기본 여백 */
+}
+.dadol_container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px; /* 원하는 높이 설정 */
+}
+.dadol_swiper_slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.dadol_swiper_slide img {
+    width: 100%; /* 슬라이드 이미지의 너비를 100%로 설정 */
+    height: auto; /* 높이는 자동 조정 */
+}
+.dadol_swiper_slide:nth-child(1) {
+    animation: slide 10s infinite;
+}
+
+.dadol_swiper_slide:nth-child(2) {
+    animation: slide 10s infinite 5s; /* 지연 설정 */
+}
+
+/* 슬라이드 애니메이션 */
+@keyframes slide {
+    0% {
+        transform: translateX(100%); /* 오른쪽에서 시작 */
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0); /* 중앙에 위치 */
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(0); /* 중앙에 위치 유지 */
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%); /* 왼쪽으로 이동 */
+        opacity: 0;
+    }
 }
 
 /* 미디어 쿼리 */
