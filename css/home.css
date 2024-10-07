@@ -1,0 +1,79 @@
+body, h1, ul, li {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+header {
+    background-color: #333;
+    padding: 30px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.dadol_nav_list {
+    display: flex;
+    justify-content: space-between; /* 공간을 균등하게 나눔 */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* 줄바꿈 허용 */
+}
+.dadol_nav_item {
+    margin: 0 20px; /* 기본 여백 */
+    flex: 1; /* 남은 공간을 균등하게 분배 */
+    text-align: center; /* 중앙 정렬 */
+}
+.item_name {
+    font-family: 'IBM Plex Sans KR', system-ui;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 5px 5px;
+}
+.dadol_nav_logo h1 {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #fff;
+    letter-spacing: 3px;
+    margin: 0 20px; /* 기본 여백 */
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 768px) {
+    .dadol_nav_item {
+        margin: 0 10px; /* 여백 줄이기 */
+    }
+    .item_name {
+        font-size: 16px; /* 폰트 크기 줄이기 */
+    }
+    .dadol_nav_logo h1 {
+        font-size: 2em; /* 로고 크기 줄이기 */
+        margin: 0; /* 여백 줄이기 */
+    }
+}
+
+@media (max-width: 480px) {
+    .dadol_nav_list {
+        flex-direction: column; /* 세로 정렬로 변경 */
+        align-items: center; /* 중앙 정렬 */
+    }
+    .dadol_nav_item {
+        margin: 5px 0; /* 위아래 여백 추가 */
+        width: 100%; /* 전체 너비 차지 */
+    }
+    .item_name {
+        font-size: 14px; /* 폰트 크기 더 줄이기 */
+    }
+    .dadol_nav_logo h1 {
+        font-size: 1.5em; /* 로고 크기 더 줄이기 */
+        margin: 0; /* 여백 없애기 */
+    }
+}
